@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_locales/flutter_locales.dart';
+import 'package:flutter_locales2/flutter_locales.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Locales.init(['en', 'fa', 'ps']); // get last saved language
+  await Locales.init(['en', 'ar', 'fa']); // get last saved language
   // remove await async (to get system language as default)
 
   runApp(MyApp());
@@ -60,8 +60,8 @@ class SettingScreen extends StatelessWidget {
             title: LocaleText('english'),
           ),
           ListTile(
-            onTap: () => Locales.change(context, 'ps'),
-            title: LocaleText('pashto'),
+            onTap: () => Locales.change(context, 'ar'),
+            title: LocaleText('Arabic'),
           ),
           // to change language with Extension
           ListTile(

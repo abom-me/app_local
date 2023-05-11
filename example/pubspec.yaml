@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   ## for contributor testing
-  flutter_locales:
+  flutter_locales2:
     path: ../
   ## for developer [uncomment the following line and remove above line]
   # flutter_locales: 2.0.0
@@ -22,4 +22,4 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/locales/
+    - assets/lang/
