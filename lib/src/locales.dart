@@ -1,12 +1,10 @@
 import 'dart:collection';
 import 'dart:convert';
 import 'dart:developer';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import '../flutter_locales.dart';
-import 'preference_utils.dart';
+import '../flutter_locales2.dart';
 import 'package:intl/intl.dart' as intl;
 
 class Locales {
