@@ -1,6 +1,6 @@
 name: "flutter_locales2"
 description: "Easily localize your app to multiple languages by using json file in assets folder and you can change the language without close the app"
-version: "1.0.1"
+version: "1.0.2"
 repository: "https://github.com/abom-me/flutter_locales2"
 documentation: "https://github.com/abom-me/flutter_locales2"
 issue_tracker: "https://github.com/abom-me/flutter_locales2/issues"

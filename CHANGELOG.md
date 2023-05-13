@@ -8,3 +8,7 @@
 * fix issues
 
 
+## 1.0.2
+
+* adding document
+

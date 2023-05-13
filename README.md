@@ -11,28 +11,43 @@
 ✅ Get Translation with `LocaleText('key')` Widget <br />
 
 ## Example App
-Look at a Simple app at [GitHub](https://github.com/iampopal/flutter_locales/tree/master/example).
+![Example app assets/lang](https://abom.me/packages/flutter_locales2/locales2_gif.gif)
 
-![Example App](simple.GIF)
-## Video Tutorial
-[![Watch the video](video.jpg)](https://youtu.be/53sWTXgzR0U)
 
 ## 1) Create locales assets
-Create an assets/locales folder at the root of your project and add your locales json files. 
+Create an assets/lang folder at the root of your project and add your locales json files. 
 **like:**
-![Example app assets/locales](assets.png)
+![Example app assets/lang](https://abom.me/packages/flutter_locales2/ex2.png)
+
+write the json code and add the text you want and give it a key like the img:
+![Example app assets/lang](https://abom.me/packages/flutter_locales2/ex.png)
 * your locale files name shall be Name of the language 
   * like: 
     * **en.json** For english locales
     * **ar.json** for Arabic locales
 
+````json
+/// English lang code
+{
+  "welcome": "Welcome to the App",
+  "change_lang": "Change the language"
+}
+
+/// Arabic lang code
+{
+  "welcome": "مرحبا بك في التطبيق",
+  "change_lang": "تغيير لغة التطبيق"
+}
+
+
+````
 ## 2) Include package and assets
-> Include latest dependency of flutter_locales
+> Include latest dependency of flutter_locales٢
 ```
 dependencies:
   flutter:
     sdk: flutter
-  flutter_locales:
+  flutter_locales2:
 ```
 > Include assets/lang/ folder
 ```
@@ -49,13 +64,13 @@ flutter:
 ```dart
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Locales.init(['en', 'fa', 'ar']); // get last saved language
+  await Locales.init(['en','ar']); // get last saved language
   // remove await if you want to get app default language
 
   runApp(MyApp());
 }
 ```
-  * `['en', 'fa', 'ar']` are language codes of `.json` files located in located in `assets/locales` folder   
+  * `['en','ar']` are language codes of `.json` files located in located in `assets/lang` folder   
   * You can replace these languages with your languages
 
 > Wrap your `MaterialApp` with `LocaleBuilder` then provide locale to app
@@ -66,8 +81,11 @@ class MyApp extends StatelessWidget {
     return LocaleBuilder(
       builder: (locale) => MaterialApp(
         title: 'Flutter Locales',
+        /// Make sure to add this line 
         localizationsDelegates: Locales.delegates,
+        /// Make sure to add this line 
         supportedLocales: Locales.supportedLocales,
+        /// Make sure to add this line 
         locale: locale,
         home: HomeScreen(),
       ),
@@ -75,7 +93,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-* `LocaleBuilder` rebuild the app you change the app locale by `Locales.change(context, 'fa')`
+* `LocaleBuilder` rebuild the app you change the app locale by `Locales.change(context, 'ar')`
 
 ## Locale Text
 `LocaleText` Widget Use to translate a key
