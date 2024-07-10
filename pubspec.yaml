@@ -1,9 +1,9 @@
-name: "flutter_locales2"
+name: "app_local"
 description: "Easily localize your app to multiple languages by using json file in assets folder and you can change the language without close the app"
-version: "1.0.2"
-repository: "https://github.com/abom-me/flutter_locales2"
-documentation: "https://github.com/abom-me/flutter_locales2"
-issue_tracker: "https://github.com/abom-me/flutter_locales2/issues"
+version: "1.0.1"
+repository: "https://github.com/abom-me/app_local"
+documentation: "https://github.com/abom-me/app_local"
+issue_tracker: "https://github.com/abom-me/app_local/issues"
 
 environment:
   sdk: ">=2.12.0 <4.0.0"
@@ -14,8 +14,8 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  shared_preferences: ^2.1.1
-  intl: ^0.18.0
+  shared_preferences: ^2.2.3
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:

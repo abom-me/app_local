@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../flutter_locales2.dart';
+import '../app_local.dart';
 
 extension LocalesExtension on BuildContext {
   Locales? get locales => Locales.of(this);

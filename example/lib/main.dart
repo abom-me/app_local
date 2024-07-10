@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_locales2/flutter_locales2.dart';
+import 'package:app_local/app_local.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Locales.init(['en', 'ar', 'fa']); // get last saved language
+  await Locales.init(localeNames: ['en', 'ar', 'fa'],localPath: "assets/a/"); // get last saved language
   // remove await async (to get system language as default)
 
   runApp(MyApp());

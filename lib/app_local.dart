@@ -1,4 +1,4 @@
-library flutter_locales2;
+library app_local;
 
 export 'src/locale_notifier.dart';
 export './src/locale_text.dart';

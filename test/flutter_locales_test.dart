@@ -1,6 +1,6 @@
 // import 'package:flutter_test/flutter_test.dart';
 
-// import 'package:flutter_locales/flutter_locales2.dart';
+// import 'package:flutter_locales/app_local.dart';
 
 // void main() {
 //   test('adds one to input values', () {
