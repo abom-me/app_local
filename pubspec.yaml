@@ -32,7 +32,5 @@ flutter:
         pluginClass: AppLangPlugin
       macos:
         pluginClass: AppLangPlugin
-      web:
-        pluginClass: AppLangWeb
-        fileName: plug/app_lang_web.dart
+
 

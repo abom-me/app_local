@@ -142,3 +142,28 @@ Add the following to your `Info.plist` file if you want to support device defaul
   <string>ar</string>
 </array>
 ```
+
+## Platform Support
+
+| Platform | Support |
+|----------|---------|
+| Android  | ✅      |
+| iOS      | ✅      |
+| macOS    | ✅      |
+| Web      | ✅      |
+| Windows  | ✅      |
+| Linux    | ✅      |
+
+### Default Native Language
+
+| Platform | Support |
+|----------|---------|
+| Android  | ✅      |
+| iOS      | ✅      |
+| macOS    | ✅      |
+| Web      | 🚫      |
+| Windows  | 🚫      |
+| Linux    | 🚫      |
+
+soon support web, windows, linux
+
