@@ -3,7 +3,10 @@ import 'package:app_local/app_local.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Locales.init(localeNames: ['en', 'ar', 'fa'],localPath: "assets/a/"); // get last saved language
+  await Locales.init(
+      localeNames: ['en', 'ar'],
+      localPath: "assets/a/",
+      phoneLocale: true); // get last saved language
   // remove await async (to get system language as default)
 
   runApp(MyApp());
@@ -61,12 +64,12 @@ class SettingScreen extends StatelessWidget {
           ),
           ListTile(
             onTap: () => Locales.change(context, 'ar'),
-            title: LocaleText('Arabic'),
+            title: LocaleText('arabic'),
           ),
           // to change language with Extension
           ListTile(
-            onTap: () => context.changeLocale('fa'),
-            title: LocaleText('farsi'),
+            onTap: () => context.changeLocale('auto'),
+            title: LocaleText('auto'),
           ),
           Text('Current Locale: ' +
               Locales.currentLocale(context)!.languageCode),

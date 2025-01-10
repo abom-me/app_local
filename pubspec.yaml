@@ -1,6 +1,6 @@
 name: "app_local"
-description: "Easily localize your app to multiple languages by using json file in assets folder and you can change the language without close the app"
-version: "1.0.1"
+description: "A Flutter package for easy app localization using JSON files, supporting device default language detection and dynamic language switching without app restart"
+version: "1.1.0"
 repository: "https://github.com/abom-me/app_local"
 documentation: "https://github.com/abom-me/app_local"
 issue_tracker: "https://github.com/abom-me/app_local/issues"
@@ -22,3 +22,17 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
+
+  plugin:
+    platforms:
+      android:
+        package: com.abom.applocal.app_lang
+        pluginClass: AppLangPlugin
+      ios:
+        pluginClass: AppLangPlugin
+      macos:
+        pluginClass: AppLangPlugin
+      web:
+        pluginClass: AppLangWeb
+        fileName: plug/app_lang_web.dart
+
