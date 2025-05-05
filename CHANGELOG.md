@@ -13,3 +13,8 @@
 
 * update the documentation
 * add support for device default language
+
+
+## 1.1.1
+
+* Fix The package in the web version

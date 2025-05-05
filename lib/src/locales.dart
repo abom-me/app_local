@@ -18,7 +18,7 @@ class Locales {
   static late Locale selectedLocale;
   static late String _path;
   static late List<Locale> supportedLocales;
-  static late String deviceLocale;
+  static late String deviceLocale = "en-OM";
   static late bool isPhoneLocalee;
 
   // Instance fields
@@ -51,9 +51,9 @@ class Locales {
 
   /// Initialize localization settings
   ///
-  ///  📝 localPath: is the path to the localization files
+  ///  📝 localPath: is the path to the localization files example: "assets/lang/"
   ///
-  ///  📝 localeNames: is the list of supported locales
+  ///  📝 localeNames: is the list of supported locales example: ["en", "ar"]
   ///
   ///  📝 phoneLocale: is the flag to use the phone language as the default language in the first time
   static Future<void> init({
@@ -70,7 +70,7 @@ class Locales {
       _path = localPath.endsWith('/') ? localPath : '$localPath/';
       supportedLocales = localeNames.map((name) => Locale(name)).toList();
       deviceLocale =
-          (await AppLang().getPhoneLanguage() ?? "en").split("-").first;
+          (await AppLang().getPhoneLanguage() ?? "en-OM").split("-").first;
       final pref = await PreferenceUtils.init();
       selectedLocale = phoneLocale == true
           ? _determineInitialLocale()

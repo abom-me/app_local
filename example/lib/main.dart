@@ -6,7 +6,8 @@ void main() async {
   await Locales.init(
       localeNames: ['en', 'ar'],
       localPath: "assets/a/",
-      phoneLocale: true); // get last saved language
+      // phoneLocale: true
+      ); // get last saved language
   // remove await async (to get system language as default)
 
   runApp(MyApp());

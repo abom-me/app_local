@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -11,8 +13,19 @@ class MethodChannelAppLang extends AppLangPlatform {
 
   @override
   Future<String?> getPhoneLanguage() async {
-    final version =
-        await methodChannel.invokeMethod<String>('getPhoneLanguage');
-    return version;
+    if (kIsWeb) {
+      return "en-OM";
+    }
+
+    try {
+      if (Platform.isAndroid || Platform.isIOS || Platform.isMacOS) {
+        final version =
+            await methodChannel.invokeMethod<String>('getPhoneLanguage');
+        return version;
+      }
+      return "en-OM";
+    } catch (e) {
+      return "en-OM";
+    }
   }
 }

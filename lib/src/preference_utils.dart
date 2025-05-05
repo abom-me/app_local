@@ -11,7 +11,7 @@ class PreferenceUtils {
   static Future<PreferenceUtils> init() async {
     PreferenceUtils.instance = PreferenceUtils();
     deviceLocale =
-        (await AppLang().getPhoneLanguage() ?? "en").split("-").first;
+        (await AppLang().getPhoneLanguage() ?? "en-OM").split("-").first;
     instance.prefs = await SharedPreferences.getInstance();
     return instance;
   }
