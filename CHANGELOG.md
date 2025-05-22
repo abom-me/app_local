@@ -18,3 +18,6 @@
 ## 1.1.1
 
 * Fix The package in the web version
+
+## 1.1.2
+* Update the packages
