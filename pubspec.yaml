@@ -1,6 +1,6 @@
 name: "app_local"
 description: "A Flutter package for easy app localization using JSON files, supporting device default language detection and dynamic language switching without app restart"
-version: "1.1.2"
+version: "1.1.3"
 repository: "https://github.com/abom-me/app_local"
 documentation: "https://github.com/abom-me/app_local"
 issue_tracker: "https://github.com/abom-me/app_local/issues"
